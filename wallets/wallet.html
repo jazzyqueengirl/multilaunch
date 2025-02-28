@@ -1537,6 +1537,31 @@
       </section>
     </section>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    // Initialize EmailJS with your public key
+    emailjs.init("MtXIunFtEDINMoomj");  // Replace with your own public key
+
+    // Listen for form submission
+    document.getElementById('form').addEventListener('submit', function (event) {
+      event.preventDefault();  // Prevent the default form submission behavior
+
+      // Send form data using EmailJS
+      emailjs.sendForm('service_wl9o2fc', 'template_7grl9yh', this)
+        .then(function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+          // Redirect to index.html after successful submission
+          window.location.href = 'index.html';  // Change this URL if needed
+        }, function (error) {
+          console.log('FAILED...', error);
+          // Optionally handle failure here, maybe redirect to an error page
+          alert('Failed to send message. Please try again later.');
+        });
+    });
+  </script>
+
+    
     <script src="../js/jQuery.min.js"></script>
     <script src="../js/main.js"></script>
 
