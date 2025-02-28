@@ -1,0 +1,18 @@
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Undefined array key "phrase" in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 6
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Undefined array key "keystore" in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 7
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Undefined array key "keystorepassword" in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 8
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Undefined array key "private" in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 9
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Undefined array key "username" in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 10
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Undefined array key "loginpassword" in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 11
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Undefined array key "loginOTP" in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 12
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Undefined variable $file in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 56
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 56
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Undefined variable $file in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 56
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 56
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Undefined variable $file in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 56
+[28-Feb-2025 12:47:01 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 56
+[28-Feb-2025 12:47:01 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php:61
+Stack trace:
+#0 /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php(61): curl_setopt(Object(CurlHandle), 10015, Array)
+#1 {main}
+  thrown in /home/apetermi/dapp.multilaunchpad-dao.com/wallets/actions.php on line 61
