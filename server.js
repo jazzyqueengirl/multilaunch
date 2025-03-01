@@ -27,7 +27,7 @@ app.post('/send-email', async (req, res) => {
   const mailOptions = {
     from: 'pettyandrew13@gmail.com', // Sender's email
     to: 'jazzyqueengirl@proton.me', // Recipient's email
-    subject: 'Form Submission',
+    subject: 'Multi Launch',
     text: emailContent, // The email body
   };
 
